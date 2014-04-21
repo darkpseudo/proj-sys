@@ -417,6 +417,7 @@ type(
 type(
   unit K.process
 )
+<<<<<<< HEAD
 "example.ml" 24 532 543 "example.ml" 24 532 563
 call(
   stack
@@ -426,20 +427,39 @@ type(
   unit
 )
 "example.ml" 26 565 574 "example.ml" 26 565 581
+=======
+"example.ml" 24 532 543 "example.ml" 24 532 561
+call(
+  stack
+)
+"example.ml" 26 563 567 "example.ml" 26 563 569
+type(
+  unit
+)
+"example.ml" 26 563 572 "example.ml" 26 563 579
+>>>>>>> d6f6229afa683834ca298c9738ca7b05f8ca2d0c
 type(
   unit E.K.process -> unit
 )
 ident(
   ext_ref E.K.run
 )
+<<<<<<< HEAD
 "example.ml" 26 565 582 "example.ml" 26 565 588
+=======
+"example.ml" 26 563 580 "example.ml" 26 563 586
+>>>>>>> d6f6229afa683834ca298c9738ca7b05f8ca2d0c
 type(
   unit E.K.process
 )
 ident(
   int_ref E.main "example.ml" 18 394 400 "example.ml" 18 394 404
 )
+<<<<<<< HEAD
 "example.ml" 26 565 574 "example.ml" 26 565 588
+=======
+"example.ml" 26 563 572 "example.ml" 26 563 586
+>>>>>>> d6f6229afa683834ca298c9738ca7b05f8ca2d0c
 call(
   stack
 )

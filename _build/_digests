@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "Rule: ocaml: ml -> cmo & cmi (%=kahn )": "\026©ÈfÃt#\128èB\130Pø±T+"
 "Rule: ocaml: ml -> cmo & cmi (%=example )": "¸Ô;RÏ ½w\133ÅÛuÕ\153\149:"
 "Resource: /Users/othmane/Desktop/info/projet-sys/projet/kahn.ml": "|&u\006\týÕý\148n\1416[x6_"
@@ -8,3 +9,14 @@
 "Rule: ocaml: cmx* & o* -> native (%=example )": "÷ú\007ÛéÑF]¸à¸X¹#\151^"
 "Resource: /Users/othmane/Desktop/info/projet-sys/projet/example.ml": "µ\141b>\023KSý\012|!­\003î\139["
 "Rule: ocaml: cmo* -> byte (%=example )": ">2×¥ª!D\023V\024´±O\006¾\135"
+=======
+"Rule: ocaml: ml -> cmo & cmi (%=kahn )": "Å0Ùü\031\012Ï\005\128\004vf\130T5Æ"
+"Rule: ocaml: ml -> cmo & cmi (%=example )": "+/ñW7µ \t\0051\146õ\020È^Y"
+"Resource: /Users/othmane/Desktop/info/projet-sys/projet/kahn.ml": "{hT]\131ÙÄ\000\018ÝÁ¶V¯<\014"
+"Rule: ocaml dependencies ml (%=kahn )": "\142\007f4\159²Ù7µ÷Mrn\005yË"
+"Rule: ocaml: ml & cmi -> cmx & o (%=kahn )": "Ó^«° +^¿\029OzmÌ!lñ"
+"Rule: ocaml: ml & cmi -> cmx & o (%=example )": "·\0054mÚ\153)5\\Ð\133¯eZÚ1"
+"Rule: ocaml dependencies ml (%=example )": "ÖÑ\016%½\140(³ö¤\026sþgøk"
+"Rule: ocaml: cmx* & o* -> native (%=example )": "7ÌÇ[\156¾\157\b=zM»ÐçM\133"
+"Resource: /Users/othmane/Desktop/info/projet-sys/projet/example.ml": "¦\012ø$@y·ý©\000\015Ã\017ueu"
+>>>>>>> d6f6229afa683834ca298c9738ca7b05f8ca2d0c

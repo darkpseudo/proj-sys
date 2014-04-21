@@ -21,6 +21,10 @@ module Example (K : Kahn.S) = struct
 
 end
 
+<<<<<<< HEAD
 module E = Example(Kahn.Contin)
+=======
+module E = Example(Kahn.Proc)
+>>>>>>> d6f6229afa683834ca298c9738ca7b05f8ca2d0c
 
 let () = E.K.run E.main

@@ -142,6 +142,7 @@ module Proc: S = struct
 	
 	
 end
+<<<<<<< HEAD
 
 module Contin: S = struct 
 
@@ -203,3 +204,5 @@ end
 
 
 
+=======
+>>>>>>> d6f6229afa683834ca298c9738ca7b05f8ca2d0c
