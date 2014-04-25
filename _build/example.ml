@@ -5,7 +5,7 @@ module Example (K : Kahn.S) = struct
 
   let integers (qo : int K.out_port) : unit K.process =
     let rec loop n =
-      (K.put n qo) >>= (fun () -> loop (n + 1))
+      (K.put n qo) >>= (fun () -> loop (n + 1 ))
     in
     loop 2
 
@@ -17,14 +17,10 @@ module Example (K : Kahn.S) = struct
 
   let main : unit K.process =
     (delay K.new_channel ()) >>=
-    (fun (q_in, q_out) -> K.doco [ integers q_out ; output q_in ; ])
+    (fun (q_in, q_out) -> K.doco [   output q_in ; integers q_out  ; ])
 
 end
 
-<<<<<<< HEAD
 module E = Example(Kahn.Contin)
-=======
-module E = Example(Kahn.Proc)
->>>>>>> d6f6229afa683834ca298c9738ca7b05f8ca2d0c
 
 let () = E.K.run E.main

@@ -7,28 +7,28 @@ type(
   int K.out_port -> unit K.process
 )
 ident(
-  def integers "example.ml" 12 235 237 "example.ml" 22 527 530
+  def integers "example.ml" 12 236 238 "example.ml" 22 531 534
 )
 "example.ml" 6 91 107 "example.ml" 6 91 109
 type(
   int K.out_port
 )
 ident(
-  def qo "example.ml" 6 91 128 "example.ml" 10 223 233
+  def qo "example.ml" 6 91 128 "example.ml" 10 224 234
 )
 "example.ml" 7 147 159 "example.ml" 7 147 163
 type(
   int -> 'a K.process
 )
 ident(
-  def loop "example.ml" 7 147 151 "example.ml" 10 223 233
+  def loop "example.ml" 7 147 151 "example.ml" 10 224 234
 )
 "example.ml" 7 147 164 "example.ml" 7 147 165
 type(
   int
 )
 ident(
-  def n "example.ml" 8 168 174 "example.ml" 8 168 215
+  def n "example.ml" 8 168 174 "example.ml" 8 168 216
 )
 "example.ml" 8 168 175 "example.ml" 8 168 180
 type(
@@ -94,204 +94,204 @@ ident(
 type(
   int
 )
-"example.ml" 8 168 207 "example.ml" 8 168 214
+"example.ml" 8 168 207 "example.ml" 8 168 215
 type(
   int
 )
-"example.ml" 8 168 202 "example.ml" 8 168 214
+"example.ml" 8 168 202 "example.ml" 8 168 215
 call(
   tail
 )
 type(
   'a K.process
 )
-"example.ml" 8 168 191 "example.ml" 8 168 215
+"example.ml" 8 168 191 "example.ml" 8 168 216
 type(
   unit -> 'a K.process
 )
-"example.ml" 8 168 174 "example.ml" 8 168 215
+"example.ml" 8 168 174 "example.ml" 8 168 216
 call(
   tail
 )
 type(
   'a K.process
 )
-"example.ml" 10 223 227 "example.ml" 10 223 231
+"example.ml" 10 224 228 "example.ml" 10 224 232
 type(
   int -> unit K.process
 )
 ident(
   int_ref loop "example.ml" 7 147 159 "example.ml" 7 147 163
 )
-"example.ml" 10 223 232 "example.ml" 10 223 233
+"example.ml" 10 224 233 "example.ml" 10 224 234
 type(
   int
 )
-"example.ml" 10 223 227 "example.ml" 10 223 233
+"example.ml" 10 224 228 "example.ml" 10 224 234
 call(
   tail
 )
 type(
   unit K.process
 )
-"example.ml" 7 147 151 "example.ml" 10 223 233
+"example.ml" 7 147 151 "example.ml" 10 224 234
 type(
   unit K.process
 )
 type(
   unit K.process
 )
-"example.ml" 12 235 241 "example.ml" 12 235 247
+"example.ml" 12 236 242 "example.ml" 12 236 248
 type(
   int K.in_port -> unit K.process
 )
 ident(
-  def output "example.ml" 18 394 396 "example.ml" 22 527 530
+  def output "example.ml" 18 395 397 "example.ml" 22 531 534
 )
-"example.ml" 12 235 249 "example.ml" 12 235 251
+"example.ml" 12 236 250 "example.ml" 12 236 252
 type(
   int K.in_port
 )
 ident(
-  def qi "example.ml" 12 235 269 "example.ml" 16 381 392
+  def qi "example.ml" 12 236 270 "example.ml" 16 382 393
 )
-"example.ml" 13 288 300 "example.ml" 13 288 304
+"example.ml" 13 289 301 "example.ml" 13 289 305
 type(
   unit -> 'b K.process
 )
 ident(
-  def loop "example.ml" 13 288 292 "example.ml" 16 381 392
+  def loop "example.ml" 13 289 293 "example.ml" 16 382 393
 )
-"example.ml" 13 288 305 "example.ml" 13 288 307
+"example.ml" 13 289 306 "example.ml" 13 289 308
 type(
   unit
 )
-"example.ml" 14 310 317 "example.ml" 14 310 322
+"example.ml" 14 311 318 "example.ml" 14 311 323
 type(
   int K.in_port -> int K.process
 )
 ident(
   ext_ref K.get
 )
-"example.ml" 14 310 323 "example.ml" 14 310 325
+"example.ml" 14 311 324 "example.ml" 14 311 326
 type(
   int K.in_port
 )
 ident(
-  int_ref qi "example.ml" 12 235 249 "example.ml" 12 235 251
+  int_ref qi "example.ml" 12 236 250 "example.ml" 12 236 252
 )
-"example.ml" 14 310 316 "example.ml" 14 310 326
+"example.ml" 14 311 317 "example.ml" 14 311 327
 call(
   stack
 )
 type(
   int K.process
 )
-"example.ml" 14 310 327 "example.ml" 14 310 330
+"example.ml" 14 311 328 "example.ml" 14 311 331
 type(
   int K.process -> (int -> 'b K.process) -> 'b K.process
 )
 ident(
   ext_ref Lib.( >>= )
 )
-"example.ml" 14 310 336 "example.ml" 14 310 337
+"example.ml" 14 311 337 "example.ml" 14 311 338
 type(
   int
 )
 ident(
-  def v "example.ml" 14 310 341 "example.ml" 14 310 372
+  def v "example.ml" 14 311 342 "example.ml" 14 311 373
 )
-"example.ml" 14 310 341 "example.ml" 14 310 354
+"example.ml" 14 311 342 "example.ml" 14 311 355
 type(
   (int -> unit, Format.formatter, unit) format -> int -> unit
 )
 ident(
   ext_ref Format.printf
 )
-"example.ml" 14 310 355 "example.ml" 14 310 361
+"example.ml" 14 311 356 "example.ml" 14 311 362
 type(
   (int -> unit, Format.formatter, unit) format
 )
-"example.ml" 14 310 362 "example.ml" 14 310 363
+"example.ml" 14 311 363 "example.ml" 14 311 364
 type(
   int
 )
 ident(
-  int_ref v "example.ml" 14 310 336 "example.ml" 14 310 337
+  int_ref v "example.ml" 14 311 337 "example.ml" 14 311 338
 )
-"example.ml" 14 310 341 "example.ml" 14 310 363
+"example.ml" 14 311 342 "example.ml" 14 311 364
 call(
   stack
 )
 type(
   unit
 )
-"example.ml" 14 310 365 "example.ml" 14 310 369
+"example.ml" 14 311 366 "example.ml" 14 311 370
 type(
   unit -> 'b K.process
 )
 ident(
-  int_ref loop "example.ml" 13 288 300 "example.ml" 13 288 304
+  int_ref loop "example.ml" 13 289 301 "example.ml" 13 289 305
 )
-"example.ml" 14 310 370 "example.ml" 14 310 372
+"example.ml" 14 311 371 "example.ml" 14 311 373
 type(
   unit
 )
-"example.ml" 14 310 365 "example.ml" 14 310 372
+"example.ml" 14 311 366 "example.ml" 14 311 373
 call(
   tail
 )
 type(
   'b K.process
 )
-"example.ml" 14 310 341 "example.ml" 14 310 372
+"example.ml" 14 311 342 "example.ml" 14 311 373
 type(
   'b K.process
 )
-"example.ml" 14 310 331 "example.ml" 14 310 373
+"example.ml" 14 311 332 "example.ml" 14 311 374
 type(
   int -> 'b K.process
 )
-"example.ml" 14 310 316 "example.ml" 14 310 373
+"example.ml" 14 311 317 "example.ml" 14 311 374
 call(
   tail
 )
 type(
   'b K.process
 )
-"example.ml" 16 381 385 "example.ml" 16 381 389
+"example.ml" 16 382 386 "example.ml" 16 382 390
 type(
   unit -> unit K.process
 )
 ident(
-  int_ref loop "example.ml" 13 288 300 "example.ml" 13 288 304
+  int_ref loop "example.ml" 13 289 301 "example.ml" 13 289 305
 )
-"example.ml" 16 381 390 "example.ml" 16 381 392
+"example.ml" 16 382 391 "example.ml" 16 382 393
 type(
   unit
 )
-"example.ml" 16 381 385 "example.ml" 16 381 392
+"example.ml" 16 382 386 "example.ml" 16 382 393
 call(
   tail
 )
 type(
   unit K.process
 )
-"example.ml" 13 288 292 "example.ml" 16 381 392
+"example.ml" 13 289 293 "example.ml" 16 382 393
 type(
   unit K.process
 )
 type(
   unit K.process
 )
-"example.ml" 18 394 400 "example.ml" 18 394 404
+"example.ml" 18 395 401 "example.ml" 18 395 405
 type(
   unit K.process
 )
 ident(
-  def main "example.ml" 20 457 525 "example.ml" 22 527 530
+  def main "example.ml" 20 458 529 "example.ml" 22 531 534
 )
-"example.ml" 19 424 429 "example.ml" 19 424 434
+"example.ml" 19 425 430 "example.ml" 19 425 435
 type(
   (unit -> int K.in_port * int K.out_port) ->
   unit -> (int K.in_port * int K.out_port) K.process
@@ -299,25 +299,25 @@ type(
 ident(
   ext_ref Lib.delay
 )
-"example.ml" 19 424 435 "example.ml" 19 424 448
+"example.ml" 19 425 436 "example.ml" 19 425 449
 type(
   unit -> int K.in_port * int K.out_port
 )
 ident(
   ext_ref K.new_channel
 )
-"example.ml" 19 424 449 "example.ml" 19 424 451
+"example.ml" 19 425 450 "example.ml" 19 425 452
 type(
   unit
 )
-"example.ml" 19 424 428 "example.ml" 19 424 452
+"example.ml" 19 425 429 "example.ml" 19 425 453
 call(
   stack
 )
 type(
   (int K.in_port * int K.out_port) K.process
 )
-"example.ml" 19 424 453 "example.ml" 19 424 456
+"example.ml" 19 425 454 "example.ml" 19 425 457
 type(
   (int K.in_port * int K.out_port) K.process ->
   (int K.in_port * int K.out_port -> unit K.process) -> unit K.process
@@ -325,89 +325,89 @@ type(
 ident(
   ext_ref Lib.( >>= )
 )
-"example.ml" 20 457 467 "example.ml" 20 457 471
+"example.ml" 20 458 468 "example.ml" 20 458 472
 type(
   int K.in_port
 )
 ident(
-  def q_in "example.ml" 20 457 483 "example.ml" 20 457 524
+  def q_in "example.ml" 20 458 484 "example.ml" 20 458 528
 )
-"example.ml" 20 457 473 "example.ml" 20 457 478
+"example.ml" 20 458 474 "example.ml" 20 458 479
 type(
   int K.out_port
 )
 ident(
-  def q_out "example.ml" 20 457 483 "example.ml" 20 457 524
+  def q_out "example.ml" 20 458 484 "example.ml" 20 458 528
 )
-"example.ml" 20 457 466 "example.ml" 20 457 479
+"example.ml" 20 458 467 "example.ml" 20 458 480
 type(
   int K.in_port * int K.out_port
 )
-"example.ml" 20 457 483 "example.ml" 20 457 489
+"example.ml" 20 458 484 "example.ml" 20 458 490
 type(
   unit K.process list -> unit K.process
 )
 ident(
   ext_ref K.doco
 )
-"example.ml" 20 457 492 "example.ml" 20 457 500
+"example.ml" 20 458 495 "example.ml" 20 458 501
+type(
+  int K.in_port -> unit K.process
+)
+ident(
+  int_ref output "example.ml" 12 236 242 "example.ml" 12 236 248
+)
+"example.ml" 20 458 502 "example.ml" 20 458 506
+type(
+  int K.in_port
+)
+ident(
+  int_ref q_in "example.ml" 20 458 468 "example.ml" 20 458 472
+)
+"example.ml" 20 458 495 "example.ml" 20 458 506
+call(
+  stack
+)
+type(
+  unit K.process
+)
+"example.ml" 20 458 509 "example.ml" 20 458 517
 type(
   int K.out_port -> unit K.process
 )
 ident(
   int_ref integers "example.ml" 6 91 97 "example.ml" 6 91 105
 )
-"example.ml" 20 457 501 "example.ml" 20 457 506
+"example.ml" 20 458 518 "example.ml" 20 458 523
 type(
   int K.out_port
 )
 ident(
-  int_ref q_out "example.ml" 20 457 473 "example.ml" 20 457 478
+  int_ref q_out "example.ml" 20 458 474 "example.ml" 20 458 479
 )
-"example.ml" 20 457 492 "example.ml" 20 457 506
+"example.ml" 20 458 509 "example.ml" 20 458 523
 call(
   stack
 )
 type(
   unit K.process
 )
-"example.ml" 20 457 509 "example.ml" 20 457 515
-type(
-  int K.in_port -> unit K.process
-)
-ident(
-  int_ref output "example.ml" 12 235 241 "example.ml" 12 235 247
-)
-"example.ml" 20 457 516 "example.ml" 20 457 520
-type(
-  int K.in_port
-)
-ident(
-  int_ref q_in "example.ml" 20 457 467 "example.ml" 20 457 471
-)
-"example.ml" 20 457 509 "example.ml" 20 457 520
-call(
-  stack
-)
-type(
-  unit K.process
-)
-"example.ml" 20 457 490 "example.ml" 20 457 524
+"example.ml" 20 458 491 "example.ml" 20 458 528
 type(
   unit K.process list
 )
-"example.ml" 20 457 483 "example.ml" 20 457 524
+"example.ml" 20 458 484 "example.ml" 20 458 528
 call(
   tail
 )
 type(
   unit K.process
 )
-"example.ml" 20 457 461 "example.ml" 20 457 525
+"example.ml" 20 458 462 "example.ml" 20 458 529
 type(
   int K.in_port * int K.out_port -> unit K.process
 )
-"example.ml" 19 424 428 "example.ml" 20 457 525
+"example.ml" 19 425 429 "example.ml" 20 458 529
 call(
   stack
 )
@@ -417,49 +417,29 @@ type(
 type(
   unit K.process
 )
-<<<<<<< HEAD
-"example.ml" 24 532 543 "example.ml" 24 532 563
+"example.ml" 24 536 547 "example.ml" 24 536 567
 call(
   stack
 )
-"example.ml" 26 565 569 "example.ml" 26 565 571
+"example.ml" 26 569 573 "example.ml" 26 569 575
 type(
   unit
 )
-"example.ml" 26 565 574 "example.ml" 26 565 581
-=======
-"example.ml" 24 532 543 "example.ml" 24 532 561
-call(
-  stack
-)
-"example.ml" 26 563 567 "example.ml" 26 563 569
-type(
-  unit
-)
-"example.ml" 26 563 572 "example.ml" 26 563 579
->>>>>>> d6f6229afa683834ca298c9738ca7b05f8ca2d0c
+"example.ml" 26 569 578 "example.ml" 26 569 585
 type(
   unit E.K.process -> unit
 )
 ident(
   ext_ref E.K.run
 )
-<<<<<<< HEAD
-"example.ml" 26 565 582 "example.ml" 26 565 588
-=======
-"example.ml" 26 563 580 "example.ml" 26 563 586
->>>>>>> d6f6229afa683834ca298c9738ca7b05f8ca2d0c
+"example.ml" 26 569 586 "example.ml" 26 569 592
 type(
   unit E.K.process
 )
 ident(
-  int_ref E.main "example.ml" 18 394 400 "example.ml" 18 394 404
+  int_ref E.main "example.ml" 18 395 401 "example.ml" 18 395 405
 )
-<<<<<<< HEAD
-"example.ml" 26 565 574 "example.ml" 26 565 588
-=======
-"example.ml" 26 563 572 "example.ml" 26 563 586
->>>>>>> d6f6229afa683834ca298c9738ca7b05f8ca2d0c
+"example.ml" 26 569 578 "example.ml" 26 569 592
 call(
   stack
 )

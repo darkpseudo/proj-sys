@@ -94,7 +94,6 @@ module Th: S = struct
 end
 
 module Proc: S = struct 
-<<<<<<< HEAD
 	type 'a process = (unit -> 'a)
 	type 'a in_port = in_channel
 	type 'a out_port = out_channel
@@ -118,29 +117,10 @@ module Proc: S = struct
 	
 	
 	let get fd = get_aux fd
-=======
-	type canal = {file: Unix.file_descr; l: int list ref}
-	type 'a process = (unit -> 'a)
-	type 'a in_port = canal
-	type 'a out_port = canal
-	
-	let new_channel () = let (a,b) = pipe () in  ({file = a; l = ref []},{file = b;l = ref []}) 
-	let put_proc v fd () = begin let a = Marshal.to_string v [Marshal.No_sharing] in 
-	ignore (Unix.write  fd.file a 0 ((String.length a)-1)); Unix.close fd.file;
-					fd.l := (String.length a)::!(fd.l) end
-	let put v fd = put_proc v fd ;;
-	
-	
-	let get fd () = let buff = String.create (List.hd (!(fd.l))) in 
-	ignore (Unix.read fd.file buff 0 ((String.length buff)-1)); Unix.close fd.file;
-	fd.l := List.tl (!(fd.l));  
-	let a =  Marshal.from_string buff 0 in a ;;
->>>>>>> d6f6229afa683834ca298c9738ca7b05f8ca2d0c
 	
 
 		
 	
-<<<<<<< HEAD
 	let rec aux_doco l () = match l with 
 	| [] -> ignore(exit 0); 
 	| h::q -> match Unix.fork () with 
@@ -157,71 +137,74 @@ module Proc: S = struct
 	let bind e e' = bind_aux e e' 
 	
 	
-=======
-	let rec aux_doco l sortie entree () = match l with 
-	| [] -> ignore (Unix.read sortie "" 0 0)
-	| h::q -> match Unix.fork () with 
-			| 0 -> h (); ignore (Unix.write entree "" 0 0); Unix.close entree; ()
-			| _ -> aux_doco q sortie entree ()
-	let doco (l : unit process list) = let (sortie, entree) = pipe () in 
-			aux_doco l sortie entree
-		
-	let return a = (fun () -> a)
-	
-	let bind e e' () = let (sortie, entree) = pipe () in let v = e () in e' v ()	
-		(*match Unix.fork() with 
-			| 0 -> e' v (); ignore (Unix.write entree "" 0 0); Unix.close entree
-			| _ -> ignore (Unix.read sortie "" 0 0);*)
->>>>>>> d6f6229afa683834ca298c9738ca7b05f8ca2d0c
 			
 	let run e = e ()
 	
 	
 end
-<<<<<<< HEAD
+
 
 module Contin: S = struct 
-
 	
- 	type 'a process = ('a -> unit) -> unit 
+	let k = ref 0
+	exception Switch
+	type 'a process = ('a -> unit) -> unit 
 	type 'a in_port = 'a Queue.t 
-	type 'a out_port = 'a Queue.t 
+	type 'a out_port = 'a Queue.t ;;
+
+	(*Switch sert ˆ changer de processus aprs un get o un put*)
+
+	let new_channel () = let q = Queue.create () in (q,q) ;;
+
+		let put v (c : 'a out_port)  =  begin k := !k + 1;
+		let proc k  = k (Queue.push v c) in proc end
+		
 
 
-	let new_channel () = let q = Queue.create () in (q,q) 
-
-	let put v (c : 'a out_port)  = 
-		let proc k  =  Queue.push v c in 
-			  proc 
-	
-	
-
-	let get v  = 
-		let proc k  = k (Queue.pop v) in 
-			proc  
-	let rec doco_aux (l : unit process list) (k : unit -> unit)  = match l with 
-			| [] -> k 
-			| p::q -> fun () ->   p (doco_aux q k) 
+	let  get (c : 'a Queue.t) = 
+   
+      let  proc k  = k (Queue.pop  c) in (proc : 'a process)
 			
-	let doco (l : unit process list) = let proc k = (doco_aux l k ) ()
-		in proc 
+
+	
+	
+	
 	
 	let return a = let p (k : 'a -> unit) = k a in (p : 'a process) 
 	
-	
+	(* Le processus prend comme continuation Push, et ˆ la fin on Pop ce qui a ŽtŽ Push*)			
+	let run (p : 'a process) = if !k >= 1 then 
+	begin k:= 0;  raise (Switch)	end 
+	else  try
+					let queue = Queue.create () in 
+ 	   				let push a = Queue.push a queue in 
+							p (push); 
+							Queue.pop queue 
+	 with 
+	 			Queue.Empty ->
+        	  raise (Switch)
+        	  
+	(* Je ne suis pas sžr de mon run, mais mme si je ne le fais pas 
+	le problme persiste*)
+	let rec doco_aux (l : unit process list) k = 	match l with 
+    | [] -> k ()
+    | a::q ->         
+           try begin
+			      run a; 
+			      	doco_aux q k   end  
+		       with
+			      	Switch   -> doco_aux (q@[a]) k  
+		
+	let doco (l : unit process list) = let proc k = doco_aux l k  in proc
 			
-(* Le processus prend comme continuation Push, et ˆ la fin on Pop ce qui a ŽtŽ Push*)			
-	let run (p : 'a process) = 
-		let queue = Queue.create () in 
-			let push a = Queue.push a queue in 
-				p (push); 
-				Queue.pop queue 
+
+			 
 				
 	let bind p q = 
 			let a = run p in 
 				let b = run (q a) in 
 					let p (k : 'b -> unit)  =  k b 
-						in (p : 'b process) 		
+						in (p : 'b process) 	
 
 end
     
@@ -238,7 +221,3 @@ end
 
 
 
-
-
-=======
->>>>>>> d6f6229afa683834ca298c9738ca7b05f8ca2d0c

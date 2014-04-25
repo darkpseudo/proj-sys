@@ -142,50 +142,69 @@ module Proc: S = struct
 	
 	
 end
-<<<<<<< HEAD
+
 
 module Contin: S = struct 
-
 	
- 	type 'a process = ('a -> unit) -> unit 
+	let k = ref 0
+	exception Switch
+	type 'a process = ('a -> unit) -> unit 
 	type 'a in_port = 'a Queue.t 
-	type 'a out_port = 'a Queue.t 
+	type 'a out_port = 'a Queue.t ;;
+
+	(*Switch sert ˆ changer de processus aprs un get o un put*)
+
+	let new_channel () = let q = Queue.create () in (q,q) ;;
+
+		let put v (c : 'a out_port)  =  begin k := !k + 1;
+		let proc k  = k (Queue.push v c) in proc end
+		
 
 
-	let new_channel () = let q = Queue.create () in (q,q) 
-
-	let put v (c : 'a out_port)  = 
-		let proc k  =  Queue.push v c in 
-			  proc 
-	
-	
-
-	let get v  = 
-		let proc k  = k (Queue.pop v) in 
-			proc  
-	let rec doco_aux (l : unit process list) (k : unit -> unit)  = match l with 
-			| [] -> k 
-			| p::q -> fun () ->   p (doco_aux q k) 
+	let  get (c : 'a Queue.t) = 
+   
+      let  proc k  = k (Queue.pop  c) in (proc : 'a process)
 			
-	let doco (l : unit process list) = let proc k = (doco_aux l k ) ()
-		in proc 
+
+	
+	
+	
 	
 	let return a = let p (k : 'a -> unit) = k a in (p : 'a process) 
 	
-	
+	(* Le processus prend comme continuation Push, et ˆ la fin on Pop ce qui a ŽtŽ Push*)			
+	let run (p : 'a process) = if !k >= 1 then 
+	begin k:= 0;  raise (Switch)	end 
+	else  try
+					let queue = Queue.create () in 
+ 	   				let push a = Queue.push a queue in 
+							p (push); 
+							Queue.pop queue 
+	 with 
+	 			Queue.Empty ->
+        	  raise (Switch)
+        	  
+	(* Je ne suis pas sžr de mon run, mais mme si je ne le fais pas 
+	le problme persiste*)
+	let rec doco_aux (l : unit process list) k = 	match l with 
+    | [] -> k ()
+    | a::q ->         
+           try begin
+			      run a; 
+			      	doco_aux q k   end  
+		       with
+			      	Switch   -> doco_aux (q@[a]) k  
+		
+	let doco (l : unit process list) = let proc k = doco_aux l k  in proc
 			
-(* Le processus prend comme continuation Push, et ˆ la fin on Pop ce qui a ŽtŽ Push*)			
-	let run (p : 'a process) = 
-		let queue = Queue.create () in 
-			let push a = Queue.push a queue in 
-				p (push); 
-				Queue.pop queue 
+
+			 
 				
 	let bind p q = 
 			let a = run p in 
 				let b = run (q a) in 
 					let p (k : 'b -> unit)  =  k b 
-						in (p : 'b process) 		
+						in (p : 'b process) 	
 
 end
     
@@ -202,7 +221,3 @@ end
 
 
 
-
-
-=======
->>>>>>> d6f6229afa683834ca298c9738ca7b05f8ca2d0c
