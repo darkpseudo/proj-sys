@@ -147,8 +147,11 @@ end
 module Contin: S = struct 
 	
 	let k = ref 0
-	exception Switch
-	exception Stop of (unit -> unit) 
+	(*Cette exception est levŽ par run  quand on run mais qu'il n'y a rien ˆ renvoyer, 
+	vu que a veut pas renvoyer unit j'ai levŽ une exception*)
+	exception Ran
+	(* Cette exception est pour dire de changer*)
+	exception Switch of (unit -> unit) 
 	type 'a process = ('a -> unit) -> unit 
 	type 'a in_port = 'a Queue.t 
 	type 'a out_port = 'a Queue.t ;;
@@ -179,8 +182,8 @@ module Contin: S = struct
 					let queue = Queue.create () in 
  	   				let push a = Queue.push a queue in 
 							p (push); 
-							Queue.pop queue 
-	 
+							try Queue.pop queue 
+	 						with Queue.Empty -> raise (Ran)
   
 	
 
@@ -194,7 +197,7 @@ module Contin: S = struct
 			       run a; doco_aux q k
 			     			   
 		    			with
-			 		  Stop(b) -> doco_aux (q@[(fun f -> b () )]) k
+			 		  Switch(b) -> doco_aux (q@[(fun f -> b () )]) k
 			 		  with 
 			 		  Queue.Empty -> doco_aux (q@[a]) k
 		
@@ -210,12 +213,12 @@ module Contin: S = struct
 						
 	let unify p = fun () -> ignore (run p) 
 	let bind p (q :'a -> 'b process) = if !k >= 2 then 
-		begin k := 0; raise (Stop (unify ( bind_aux p q)) ) end
+		begin k := 0; raise (Switch (unify ( bind_aux p q)) ) end
 	else
 		try 
 			bind_aux p (q :'a -> 'b process)
 	  with 
-	 		| Queue.Empty -> raise (Stop (unify ( bind_aux p q)))
+	 		| Queue.Empty -> raise (Switch (unify ( bind_aux p q)))
 	
 	
 
