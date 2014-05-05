@@ -148,7 +148,7 @@ module Contin: S = struct
 	
 	let k = ref 0
 	(*Cette exception est levŽ par run  quand on run mais qu'il n'y a rien ˆ renvoyer, 
-	vu que a veut pas renvoyer unit j'ai levŽ une exception*)
+	cei n'arrive jamais normalement*)
 	exception Ran
 	(* Cette exception est pour dire de changer*)
 	exception Switch of (unit -> unit) 
@@ -182,8 +182,8 @@ module Contin: S = struct
 					let queue = Queue.create () in 
  	   				let push a = Queue.push a queue in 
 							p (push); 
-							try Queue.pop queue 
-	 						with Queue.Empty -> raise (Ran)
+							(*try*) Queue.pop queue 
+	 						(*with Queue.Empty -> raise (Ran)*)
   
 	
 
@@ -197,7 +197,7 @@ module Contin: S = struct
 		    	with
 			 	 | Switch(b) -> doco_aux (q@[(fun f -> b () )]) k			 		 
 			 	 | Queue.Empty -> doco_aux (q@[a]) k
-			 	 | Ran -> doco_aux q k
+			 	 (*| Ran -> doco_aux q k*)
 			 	 | _ -> assert false
 		
   let doco (l : unit process list) = (doco_aux l : unit process)
