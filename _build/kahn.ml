@@ -148,6 +148,7 @@ module Contin: S = struct
 	
 	let k = ref 0
 	exception Switch
+	exception Stop of (unit -> unit) 
 	type 'a process = ('a -> unit) -> unit 
 	type 'a in_port = 'a Queue.t 
 	type 'a out_port = 'a Queue.t ;;
@@ -172,39 +173,51 @@ module Contin: S = struct
 	
 	let return a = let p (k : 'a -> unit) = k a in (p : 'a process) 
 	
-	(* Le processus prend comme continuation Push, et ˆ la fin on Pop ce qui a ŽtŽ Push*)			
-	let run (p : 'a process) = if !k >= 1 then 
-	begin k:= 0;  raise (Switch)	end 
-	else  try
+	(* Le processus prend comme continuation Push, et ˆ la fin on Pop ce qui a ŽtŽ Push, 
+	ce qui me chagrine c'est qu'on est pas sžr d'avoir Push quoi que ce soit.*)			
+	let  run (p : 'a process) = 
 					let queue = Queue.create () in 
  	   				let push a = Queue.push a queue in 
 							p (push); 
 							Queue.pop queue 
-	 with 
-	 			Queue.Empty ->
-        	  raise (Switch)
+	 
+  
+	
+
         	  
-	(* Je ne suis pas sžr de mon run, mais mme si je ne le fais pas 
-	le problme persiste*)
-	let rec doco_aux (l : unit process list) k = 	match l with 
-    | [] -> k ()
-    | a::q ->         
-           try begin
-			      run a; 
-			      	doco_aux q k   end  
-		       with
-			      	Switch   -> doco_aux (q@[a]) k  
+	
+	let rec doco_aux (l : unit process list) k = 	match l with
+		 | []  -> k ()   
+     | a::q -> try
+         
+            try 
+			       run a; doco_aux q k
+			     			   
+		    			with
+			 		  Stop(b) -> doco_aux (q@[(fun f -> b () )]) k
+			 		  with 
+			 		  Queue.Empty -> doco_aux (q@[a]) k
 		
-	let doco (l : unit process list) = let proc k = doco_aux l k  in proc
-			
+  let doco (l : unit process list) = (doco_aux l : unit process)
 
 			 
 				
-	let bind p q = 
-			let a = run p in 
-				let b = run (q a) in 
-					let p (k : 'b -> unit)  =  k b 
-						in (p : 'b process) 	
+	let bind_aux p (q :'a -> 'b process) f=  
+		let a = run p in 
+			let b = run (q a) in 
+				let proc (k : 'b -> unit)  =  k b 
+					in proc (f) 							 
+						
+	let unify p = fun () -> ignore (run p) 
+	let bind p (q :'a -> 'b process) = if !k >= 2 then 
+		begin k := 0; raise (Stop (unify ( bind_aux p q)) ) end
+	else
+		try 
+			bind_aux p (q :'a -> 'b process)
+	  with 
+	 		| Queue.Empty -> raise (Stop (unify ( bind_aux p q)))
+	
+	
 
 end
     
