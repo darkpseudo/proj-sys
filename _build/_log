@@ -2,11 +2,11 @@
 # Target: example.ml.depends, tags: { annot, debug, extension:ml, file:example.ml, ocaml, ocamldep, quiet, thread }
 /usr/local/bin/ocamldep.opt -modules example.ml > example.ml.depends # cached
 # Target: kahn.ml.depends, tags: { annot, debug, extension:ml, file:kahn.ml, ocaml, ocamldep, quiet, thread }
-/usr/local/bin/ocamldep.opt -modules kahn.ml > kahn.ml.depends
+/usr/local/bin/ocamldep.opt -modules kahn.ml > kahn.ml.depends # cached
 # Target: kahn.cmo, tags: { annot, byte, compile, debug, extension:cmo, extension:ml, file:kahn.cmo, file:kahn.ml, implem, ocaml, quiet, thread }
-/usr/local/bin/ocamlc.opt -c -g -annot -thread -o kahn.cmo kahn.ml
+/usr/local/bin/ocamlc.opt -c -g -annot -thread -o kahn.cmo kahn.ml # cached
 # Target: example.cmo, tags: { annot, byte, compile, debug, extension:cmo, extension:ml, file:example.cmo, file:example.ml, implem, ocaml, quiet, thread }
-/usr/local/bin/ocamlc.opt -c -g -annot -thread -o example.cmo example.ml
+/usr/local/bin/ocamlc.opt -c -g -annot -thread -o example.cmo example.ml # cached
 # Target: example.byte, tags: { annot, byte, debug, dont_link_with, extension:byte, file:example.byte, link, ocaml, program, quiet, thread }
-/usr/local/bin/ocamlc.opt unix.cma -g -thread threads.cma kahn.cmo example.cmo -o example.byte
+/usr/local/bin/ocamlc.opt unix.cma -g -thread threads.cma kahn.cmo example.cmo -o example.byte # cached
 # Compilation successful.

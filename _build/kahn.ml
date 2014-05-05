@@ -191,25 +191,27 @@ module Contin: S = struct
 	
 	let rec doco_aux (l : unit process list) k = 	match l with
 		 | []  -> k ()   
-     | a::q -> try
-         
-            try 
+     | a::q -> try 
 			       run a; doco_aux q k
 			     			   
-		    			with
-			 		  Switch(b) -> doco_aux (q@[(fun f -> b () )]) k
-			 		  with 
-			 		  Queue.Empty -> doco_aux (q@[a]) k
+		    	with
+			 	 | Switch(b) -> doco_aux (q@[(fun f -> b () )]) k			 		 
+			 	 | Queue.Empty -> doco_aux (q@[a]) k
+			 	 | Ran -> doco_aux q k
+			 	 | _ -> assert false
 		
   let doco (l : unit process list) = (doco_aux l : unit process)
 
 			 
 				
-	let bind_aux p (q :'a -> 'b process) f=  
+	let bind_aux p (q :'a -> 'b process) f=   
 		let a = run p in 
 			let b = run (q a) in 
 				let proc (k : 'b -> unit)  =  k b 
-					in proc (f) 							 
+					in proc (f) 	
+			 
+						
+						 
 						
 	let unify p = fun () -> ignore (run p) 
 	let bind p (q :'a -> 'b process) = if !k >= 2 then 

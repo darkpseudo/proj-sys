@@ -1,1 +1,3 @@
-Il faut écrire des choses ici.
+Dans la partie séquentielle, ce genre de processus ne marche pas. a est un canal : 
+let test = bind (fun x -> Qeue.push 2 a) (fun y -> (fun x -> Queue.push 3 a)) 
+ça renvoie Ran, mais en fait ça ne push pas le 3, la raison étant que je n'arrive pas à rattrapper l'exception Ran dans bine sans forcer le type de retour de bind à unit_process 

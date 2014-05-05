@@ -2330,7 +2330,7 @@ type(
   int ref
 )
 ident(
-  def k "kahn.ml" 152 3060 3061 "kahn.ml" 225 4867 4870
+  def k "kahn.ml" 152 3060 3061 "kahn.ml" 227 4900 4903
 )
 "kahn.ml" 149 2900 2909 "kahn.ml" 149 2900 2912
 type(
@@ -2352,7 +2352,7 @@ type(
   unit -> 'a Queue.t * 'a Queue.t
 )
 ident(
-  def new_channel "kahn.ml" 163 3389 3391 "kahn.ml" 225 4867 4870
+  def new_channel "kahn.ml" 163 3389 3391 "kahn.ml" 227 4900 4903
 )
 "kahn.ml" 161 3330 3347 "kahn.ml" 161 3330 3349
 type(
@@ -2410,7 +2410,7 @@ type(
   'a0 -> 'a0 out_port -> (unit -> 'b) -> 'b
 )
 ident(
-  def put "kahn.ml" 168 3494 3495 "kahn.ml" 225 4867 4870
+  def put "kahn.ml" 168 3494 3495 "kahn.ml" 227 4900 4903
 )
 "kahn.ml" 163 3389 3399 "kahn.ml" 163 3389 3400
 type(
@@ -2553,7 +2553,7 @@ type(
   'a1 Queue.t -> 'a1 process
 )
 ident(
-  def get "kahn.ml" 177 3602 3603 "kahn.ml" 225 4867 4870
+  def get "kahn.ml" 177 3602 3603 "kahn.ml" 227 4900 4903
 )
 "kahn.ml" 168 3494 3505 "kahn.ml" 168 3494 3506
 type(
@@ -2630,7 +2630,7 @@ type(
   'a2 -> 'a2 process
 )
 ident(
-  def return "kahn.ml" 181 3837 3838 "kahn.ml" 225 4867 4870
+  def return "kahn.ml" 181 3837 3838 "kahn.ml" 227 4900 4903
 )
 "kahn.ml" 177 3602 3614 "kahn.ml" 177 3602 3615
 type(
@@ -2693,7 +2693,7 @@ type(
   'a3 process -> 'a3
 )
 ident(
-  def run "kahn.ml" 192 4055 4056 "kahn.ml" 225 4867 4870
+  def run "kahn.ml" 192 4055 4056 "kahn.ml" 227 4900 4903
 )
 "kahn.ml" 181 3837 3848 "kahn.ml" 181 3837 3849
 type(
@@ -2851,21 +2851,21 @@ type(
   unit process list -> (unit -> 'e) -> 'e
 )
 ident(
-  def doco_aux "kahn.ml" 192 4055 4056 "kahn.ml" 225 4867 4870
+  def doco_aux "kahn.ml" 192 4055 4056 "kahn.ml" 227 4900 4903
 )
 "kahn.ml" 192 4055 4074 "kahn.ml" 192 4055 4075
 type(
   unit process list
 )
 ident(
-  def l "kahn.ml" 192 4055 4097 "kahn.ml" 202 4309 4350
+  def l "kahn.ml" 192 4055 4097 "kahn.ml" 201 4344 4369
 )
 "kahn.ml" 192 4055 4097 "kahn.ml" 192 4055 4098
 type(
   unit -> 'e
 )
 ident(
-  def k "kahn.ml" 192 4055 4102 "kahn.ml" 202 4309 4350
+  def k "kahn.ml" 192 4055 4102 "kahn.ml" 201 4344 4369
 )
 "kahn.ml" 192 4055 4108 "kahn.ml" 192 4055 4109
 type(
@@ -2901,257 +2901,293 @@ type(
   unit process
 )
 ident(
-  def a "kahn.ml" 194 4135 4150 "kahn.ml" 202 4309 4350
+  def a "kahn.ml" 194 4135 4150 "kahn.ml" 201 4344 4369
 )
 "kahn.ml" 194 4135 4145 "kahn.ml" 194 4135 4146
 type(
   unit process list
 )
 ident(
-  def q "kahn.ml" 194 4135 4150 "kahn.ml" 202 4309 4350
+  def q "kahn.ml" 194 4135 4150 "kahn.ml" 201 4344 4369
 )
 "kahn.ml" 194 4135 4142 "kahn.ml" 194 4135 4146
 type(
   unit process list
 )
-"kahn.ml" 197 4181 4191 "kahn.ml" 197 4181 4194
+"kahn.ml" 195 4155 4165 "kahn.ml" 195 4155 4168
 type(
   unit process -> unit
 )
 ident(
   int_ref run "kahn.ml" 181 3837 3843 "kahn.ml" 181 3837 3846
 )
-"kahn.ml" 197 4181 4195 "kahn.ml" 197 4181 4196
+"kahn.ml" 195 4155 4169 "kahn.ml" 195 4155 4170
 type(
   unit process
 )
 ident(
   int_ref a "kahn.ml" 194 4135 4142 "kahn.ml" 194 4135 4143
 )
-"kahn.ml" 197 4181 4191 "kahn.ml" 197 4181 4196
+"kahn.ml" 195 4155 4165 "kahn.ml" 195 4155 4170
 call(
   stack
 )
 type(
   unit
 )
-"kahn.ml" 197 4181 4198 "kahn.ml" 197 4181 4206
+"kahn.ml" 195 4155 4172 "kahn.ml" 195 4155 4180
 type(
   unit process list -> (unit -> 'e) -> 'e
 )
 ident(
   int_ref doco_aux "kahn.ml" 192 4055 4064 "kahn.ml" 192 4055 4072
 )
-"kahn.ml" 197 4181 4207 "kahn.ml" 197 4181 4208
+"kahn.ml" 195 4155 4181 "kahn.ml" 195 4155 4182
 type(
   unit process list
 )
 ident(
   int_ref q "kahn.ml" 194 4135 4145 "kahn.ml" 194 4135 4146
 )
-"kahn.ml" 197 4181 4209 "kahn.ml" 197 4181 4210
+"kahn.ml" 195 4155 4183 "kahn.ml" 195 4155 4184
 type(
   unit -> 'e
 )
 ident(
   int_ref k "kahn.ml" 192 4055 4097 "kahn.ml" 192 4055 4098
 )
-"kahn.ml" 197 4181 4198 "kahn.ml" 197 4181 4210
+"kahn.ml" 195 4155 4172 "kahn.ml" 195 4155 4184
 call(
   stack
 )
 type(
   'e
 )
-"kahn.ml" 197 4181 4191 "kahn.ml" 197 4181 4210
+"kahn.ml" 195 4155 4165 "kahn.ml" 195 4155 4184
 type(
   'e
 )
-"kahn.ml" 200 4240 4255 "kahn.ml" 200 4240 4256
+"kahn.ml" 198 4212 4227 "kahn.ml" 198 4212 4228
 ident(
-  def b "kahn.ml" 200 4240 4261 "kahn.ml" 200 4240 4294
+  def b "kahn.ml" 198 4212 4233 "kahn.ml" 198 4212 4266
 )
-"kahn.ml" 200 4240 4254 "kahn.ml" 200 4240 4257
+"kahn.ml" 198 4212 4226 "kahn.ml" 198 4212 4229
 type(
   unit -> unit
 )
-"kahn.ml" 200 4240 4248 "kahn.ml" 200 4240 4257
+"kahn.ml" 198 4212 4220 "kahn.ml" 198 4212 4229
 type(
   exn
 )
-"kahn.ml" 200 4240 4261 "kahn.ml" 200 4240 4269
+"kahn.ml" 198 4212 4233 "kahn.ml" 198 4212 4241
 type(
   unit process list -> (unit -> 'e) -> 'e
 )
 ident(
   int_ref doco_aux "kahn.ml" 192 4055 4064 "kahn.ml" 192 4055 4072
 )
-"kahn.ml" 200 4240 4271 "kahn.ml" 200 4240 4272
+"kahn.ml" 198 4212 4243 "kahn.ml" 198 4212 4244
 type(
   unit process list
 )
 ident(
   int_ref q "kahn.ml" 194 4135 4145 "kahn.ml" 194 4135 4146
 )
-"kahn.ml" 200 4240 4272 "kahn.ml" 200 4240 4273
+"kahn.ml" 198 4212 4244 "kahn.ml" 198 4212 4245
 type(
   unit process list -> unit process list -> unit process list
 )
 ident(
   ext_ref Pervasives.( @ )
 )
-"kahn.ml" 200 4240 4279 "kahn.ml" 200 4240 4280
+"kahn.ml" 198 4212 4251 "kahn.ml" 198 4212 4252
 type(
   unit -> unit
 )
 ident(
-  def f "kahn.ml" 200 4240 4284 "kahn.ml" 200 4240 4288
+  def f "kahn.ml" 198 4212 4256 "kahn.ml" 198 4212 4260
 )
-"kahn.ml" 200 4240 4284 "kahn.ml" 200 4240 4285
+"kahn.ml" 198 4212 4256 "kahn.ml" 198 4212 4257
 type(
   unit -> unit
 )
 ident(
-  int_ref b "kahn.ml" 200 4240 4254 "kahn.ml" 200 4240 4257
+  int_ref b "kahn.ml" 198 4212 4226 "kahn.ml" 198 4212 4229
 )
-"kahn.ml" 200 4240 4286 "kahn.ml" 200 4240 4288
+"kahn.ml" 198 4212 4258 "kahn.ml" 198 4212 4260
 type(
   unit
 )
-"kahn.ml" 200 4240 4284 "kahn.ml" 200 4240 4288
+"kahn.ml" 198 4212 4256 "kahn.ml" 198 4212 4260
 call(
   tail
 )
 type(
   unit
 )
-"kahn.ml" 200 4240 4274 "kahn.ml" 200 4240 4290
+"kahn.ml" 198 4212 4246 "kahn.ml" 198 4212 4262
 type(
   unit process
 )
-"kahn.ml" 200 4240 4273 "kahn.ml" 200 4240 4291
+"kahn.ml" 198 4212 4245 "kahn.ml" 198 4212 4263
 type(
   unit process list
 )
-"kahn.ml" 200 4240 4270 "kahn.ml" 200 4240 4292
+"kahn.ml" 198 4212 4242 "kahn.ml" 198 4212 4264
 call(
   stack
 )
 type(
   unit process list
 )
-"kahn.ml" 200 4240 4293 "kahn.ml" 200 4240 4294
+"kahn.ml" 198 4212 4265 "kahn.ml" 198 4212 4266
 type(
   unit -> 'e
 )
 ident(
   int_ref k "kahn.ml" 192 4055 4097 "kahn.ml" 192 4055 4098
 )
-"kahn.ml" 200 4240 4261 "kahn.ml" 200 4240 4294
+"kahn.ml" 198 4212 4233 "kahn.ml" 198 4212 4266
 call(
-  stack
+  tail
 )
 type(
   'e
 )
-"kahn.ml" 196 4164 4176 "kahn.ml" 200 4240 4294
-type(
-  'e
-)
-"kahn.ml" 202 4309 4317 "kahn.ml" 202 4309 4328
+"kahn.ml" 199 4274 4282 "kahn.ml" 199 4274 4293
 type(
   exn
 )
-"kahn.ml" 202 4309 4332 "kahn.ml" 202 4309 4340
+"kahn.ml" 199 4274 4297 "kahn.ml" 199 4274 4305
 type(
   unit process list -> (unit -> 'e) -> 'e
 )
 ident(
   int_ref doco_aux "kahn.ml" 192 4055 4064 "kahn.ml" 192 4055 4072
 )
-"kahn.ml" 202 4309 4342 "kahn.ml" 202 4309 4343
+"kahn.ml" 199 4274 4307 "kahn.ml" 199 4274 4308
 type(
   unit process list
 )
 ident(
   int_ref q "kahn.ml" 194 4135 4145 "kahn.ml" 194 4135 4146
 )
-"kahn.ml" 202 4309 4343 "kahn.ml" 202 4309 4344
+"kahn.ml" 199 4274 4308 "kahn.ml" 199 4274 4309
 type(
   unit process list -> unit process list -> unit process list
 )
 ident(
   ext_ref Pervasives.( @ )
 )
-"kahn.ml" 202 4309 4345 "kahn.ml" 202 4309 4346
+"kahn.ml" 199 4274 4310 "kahn.ml" 199 4274 4311
 type(
   unit process
 )
 ident(
   int_ref a "kahn.ml" 194 4135 4142 "kahn.ml" 194 4135 4143
 )
-"kahn.ml" 202 4309 4344 "kahn.ml" 202 4309 4347
+"kahn.ml" 199 4274 4309 "kahn.ml" 199 4274 4312
 type(
   unit process list
 )
-"kahn.ml" 202 4309 4341 "kahn.ml" 202 4309 4348
+"kahn.ml" 199 4274 4306 "kahn.ml" 199 4274 4313
 call(
   stack
 )
 type(
   unit process list
 )
-"kahn.ml" 202 4309 4349 "kahn.ml" 202 4309 4350
+"kahn.ml" 199 4274 4314 "kahn.ml" 199 4274 4315
 type(
   unit -> 'e
 )
 ident(
   int_ref k "kahn.ml" 192 4055 4097 "kahn.ml" 192 4055 4098
 )
-"kahn.ml" 202 4309 4332 "kahn.ml" 202 4309 4350
+"kahn.ml" 199 4274 4297 "kahn.ml" 199 4274 4315
 call(
   tail
 )
 type(
   'e
 )
-"kahn.ml" 194 4135 4150 "kahn.ml" 202 4309 4350
+"kahn.ml" 200 4316 4324 "kahn.ml" 200 4316 4327
 type(
-  'e
+  exn
 )
-"kahn.ml" 192 4055 4102 "kahn.ml" 202 4309 4350
+"kahn.ml" 200 4316 4331 "kahn.ml" 200 4316 4339
 type(
-  'e
-)
-"kahn.ml" 204 4354 4360 "kahn.ml" 204 4354 4364
-type(
-  unit process list -> unit process
+  unit process list -> (unit -> 'e) -> 'e
 )
 ident(
-  def doco "kahn.ml" 208 4430 4431 "kahn.ml" 225 4867 4870
+  int_ref doco_aux "kahn.ml" 192 4055 4064 "kahn.ml" 192 4055 4072
 )
-"kahn.ml" 204 4354 4366 "kahn.ml" 204 4354 4367
+"kahn.ml" 200 4316 4340 "kahn.ml" 200 4316 4341
 type(
   unit process list
 )
 ident(
-  def l "kahn.ml" 204 4354 4391 "kahn.ml" 204 4354 4418
+  int_ref q "kahn.ml" 194 4135 4145 "kahn.ml" 194 4135 4146
 )
-"kahn.ml" 204 4354 4392 "kahn.ml" 204 4354 4400
+"kahn.ml" 200 4316 4342 "kahn.ml" 200 4316 4343
+type(
+  unit -> 'e
+)
+ident(
+  int_ref k "kahn.ml" 192 4055 4097 "kahn.ml" 192 4055 4098
+)
+"kahn.ml" 200 4316 4331 "kahn.ml" 200 4316 4343
+call(
+  tail
+)
+type(
+  'e
+)
+"kahn.ml" 201 4344 4352 "kahn.ml" 201 4344 4353
+type(
+  exn
+)
+"kahn.ml" 201 4344 4357 "kahn.ml" 201 4344 4369
+type(
+  'e
+)
+"kahn.ml" 194 4135 4150 "kahn.ml" 201 4344 4369
+type(
+  'e
+)
+"kahn.ml" 192 4055 4102 "kahn.ml" 201 4344 4369
+type(
+  'e
+)
+"kahn.ml" 203 4373 4379 "kahn.ml" 203 4373 4383
+type(
+  unit process list -> unit process
+)
+ident(
+  def doco "kahn.ml" 207 4449 4450 "kahn.ml" 227 4900 4903
+)
+"kahn.ml" 203 4373 4385 "kahn.ml" 203 4373 4386
+type(
+  unit process list
+)
+ident(
+  def l "kahn.ml" 203 4373 4410 "kahn.ml" 203 4373 4437
+)
+"kahn.ml" 203 4373 4411 "kahn.ml" 203 4373 4419
 type(
   unit process list -> unit process
 )
 ident(
   int_ref doco_aux "kahn.ml" 192 4055 4064 "kahn.ml" 192 4055 4072
 )
-"kahn.ml" 204 4354 4401 "kahn.ml" 204 4354 4402
+"kahn.ml" 203 4373 4420 "kahn.ml" 203 4373 4421
 type(
   unit process list
 )
 ident(
-  int_ref l "kahn.ml" 204 4354 4366 "kahn.ml" 204 4354 4367
+  int_ref l "kahn.ml" 203 4373 4385 "kahn.ml" 203 4373 4386
 )
-"kahn.ml" 204 4354 4392 "kahn.ml" 204 4354 4402
+"kahn.ml" 203 4373 4411 "kahn.ml" 203 4373 4421
 call(
   tail
 )
@@ -3161,378 +3197,378 @@ type(
 type(
   unit process
 )
-"kahn.ml" 208 4430 4435 "kahn.ml" 208 4430 4443
+"kahn.ml" 207 4449 4454 "kahn.ml" 207 4449 4462
 type(
   'a4 process -> ('a4 -> 'b0 process) -> ('b0 -> unit) -> unit
 )
 ident(
-  def bind_aux "kahn.ml" 214 4590 4591 "kahn.ml" 225 4867 4870
+  def bind_aux "kahn.ml" 216 4623 4624 "kahn.ml" 227 4900 4903
 )
-"kahn.ml" 208 4430 4444 "kahn.ml" 208 4430 4445
+"kahn.ml" 207 4449 4463 "kahn.ml" 207 4449 4464
 type(
   'a4 process
 )
 ident(
-  def p "kahn.ml" 208 4430 4446 "kahn.ml" 212 4557 4573
+  def p "kahn.ml" 207 4449 4465 "kahn.ml" 211 4577 4593
 )
-"kahn.ml" 208 4430 4447 "kahn.ml" 208 4430 4448
+"kahn.ml" 207 4449 4466 "kahn.ml" 207 4449 4467
 type(
   'a4 -> 'b0 process
 )
 ident(
-  def q "kahn.ml" 208 4430 4468 "kahn.ml" 212 4557 4573
+  def q "kahn.ml" 207 4449 4487 "kahn.ml" 211 4577 4593
 )
-"kahn.ml" 208 4430 4468 "kahn.ml" 208 4430 4469
+"kahn.ml" 207 4449 4487 "kahn.ml" 207 4449 4488
 type(
   'b0 -> unit
 )
 ident(
-  def f "kahn.ml" 209 4473 4475 "kahn.ml" 212 4557 4573
+  def f "kahn.ml" 208 4493 4495 "kahn.ml" 211 4577 4593
 )
-"kahn.ml" 209 4473 4479 "kahn.ml" 209 4473 4480
+"kahn.ml" 208 4493 4499 "kahn.ml" 208 4493 4500
 type(
   'a4
 )
 ident(
-  def a "kahn.ml" 210 4493 4496 "kahn.ml" 212 4557 4573
+  def a "kahn.ml" 209 4513 4516 "kahn.ml" 211 4577 4593
 )
-"kahn.ml" 209 4473 4483 "kahn.ml" 209 4473 4486
+"kahn.ml" 208 4493 4503 "kahn.ml" 208 4493 4506
 type(
   'a4 process -> 'a4
 )
 ident(
   int_ref run "kahn.ml" 181 3837 3843 "kahn.ml" 181 3837 3846
 )
-"kahn.ml" 209 4473 4487 "kahn.ml" 209 4473 4488
+"kahn.ml" 208 4493 4507 "kahn.ml" 208 4493 4508
 type(
   'a4 process
 )
 ident(
-  int_ref p "kahn.ml" 208 4430 4444 "kahn.ml" 208 4430 4445
+  int_ref p "kahn.ml" 207 4449 4463 "kahn.ml" 207 4449 4464
 )
-"kahn.ml" 209 4473 4483 "kahn.ml" 209 4473 4488
+"kahn.ml" 208 4493 4503 "kahn.ml" 208 4493 4508
 call(
   stack
 )
 type(
   'a4
 )
-"kahn.ml" 210 4493 4500 "kahn.ml" 210 4493 4501
+"kahn.ml" 209 4513 4520 "kahn.ml" 209 4513 4521
 type(
   'b0
 )
 ident(
-  def b "kahn.ml" 211 4518 4522 "kahn.ml" 212 4557 4573
+  def b "kahn.ml" 210 4538 4542 "kahn.ml" 211 4577 4593
 )
-"kahn.ml" 210 4493 4504 "kahn.ml" 210 4493 4507
+"kahn.ml" 209 4513 4524 "kahn.ml" 209 4513 4527
 type(
   'b0 process -> 'b0
 )
 ident(
   int_ref run "kahn.ml" 181 3837 3843 "kahn.ml" 181 3837 3846
 )
-"kahn.ml" 210 4493 4509 "kahn.ml" 210 4493 4510
+"kahn.ml" 209 4513 4529 "kahn.ml" 209 4513 4530
 type(
   'a4 -> 'b0 process
 )
 ident(
-  int_ref q "kahn.ml" 208 4430 4447 "kahn.ml" 208 4430 4448
+  int_ref q "kahn.ml" 207 4449 4466 "kahn.ml" 207 4449 4467
 )
-"kahn.ml" 210 4493 4511 "kahn.ml" 210 4493 4512
+"kahn.ml" 209 4513 4531 "kahn.ml" 209 4513 4532
 type(
   'a4
 )
 ident(
-  int_ref a "kahn.ml" 209 4473 4479 "kahn.ml" 209 4473 4480
+  int_ref a "kahn.ml" 208 4493 4499 "kahn.ml" 208 4493 4500
 )
-"kahn.ml" 210 4493 4508 "kahn.ml" 210 4493 4513
+"kahn.ml" 209 4513 4528 "kahn.ml" 209 4513 4533
 call(
   stack
 )
 type(
   'b0 process
 )
-"kahn.ml" 210 4493 4504 "kahn.ml" 210 4493 4513
+"kahn.ml" 209 4513 4524 "kahn.ml" 209 4513 4533
 call(
   stack
 )
 type(
   'b0
 )
-"kahn.ml" 211 4518 4526 "kahn.ml" 211 4518 4530
+"kahn.ml" 210 4538 4546 "kahn.ml" 210 4538 4550
 type(
   ('b0 -> unit) -> unit
 )
 ident(
-  def proc "kahn.ml" 212 4557 4565 "kahn.ml" 212 4557 4573
+  def proc "kahn.ml" 211 4577 4585 "kahn.ml" 211 4577 4593
 )
-"kahn.ml" 211 4518 4532 "kahn.ml" 211 4518 4533
+"kahn.ml" 210 4538 4552 "kahn.ml" 210 4538 4553
 type(
   'b0 -> unit
 )
 ident(
-  def k "kahn.ml" 211 4518 4552 "kahn.ml" 211 4518 4555
+  def k "kahn.ml" 210 4538 4572 "kahn.ml" 210 4538 4575
 )
-"kahn.ml" 211 4518 4552 "kahn.ml" 211 4518 4553
+"kahn.ml" 210 4538 4572 "kahn.ml" 210 4538 4573
 type(
   'b0 -> unit
 )
 ident(
-  int_ref k "kahn.ml" 211 4518 4532 "kahn.ml" 211 4518 4533
+  int_ref k "kahn.ml" 210 4538 4552 "kahn.ml" 210 4538 4553
 )
-"kahn.ml" 211 4518 4554 "kahn.ml" 211 4518 4555
+"kahn.ml" 210 4538 4574 "kahn.ml" 210 4538 4575
 type(
   'b0
 )
 ident(
-  int_ref b "kahn.ml" 210 4493 4500 "kahn.ml" 210 4493 4501
+  int_ref b "kahn.ml" 209 4513 4520 "kahn.ml" 209 4513 4521
 )
-"kahn.ml" 211 4518 4552 "kahn.ml" 211 4518 4555
+"kahn.ml" 210 4538 4572 "kahn.ml" 210 4538 4575
 call(
   tail
 )
 type(
   unit
 )
-"kahn.ml" 212 4557 4565 "kahn.ml" 212 4557 4569
+"kahn.ml" 211 4577 4585 "kahn.ml" 211 4577 4589
 type(
   ('b0 -> unit) -> unit
 )
 ident(
-  int_ref proc "kahn.ml" 211 4518 4526 "kahn.ml" 211 4518 4530
+  int_ref proc "kahn.ml" 210 4538 4546 "kahn.ml" 210 4538 4550
 )
-"kahn.ml" 212 4557 4570 "kahn.ml" 212 4557 4573
+"kahn.ml" 211 4577 4590 "kahn.ml" 211 4577 4593
 type(
   'b0 -> unit
 )
 ident(
-  int_ref f "kahn.ml" 208 4430 4468 "kahn.ml" 208 4430 4469
+  int_ref f "kahn.ml" 207 4449 4487 "kahn.ml" 207 4449 4488
 )
-"kahn.ml" 212 4557 4565 "kahn.ml" 212 4557 4573
+"kahn.ml" 211 4577 4585 "kahn.ml" 211 4577 4593
 call(
   tail
 )
 type(
   unit
 )
-"kahn.ml" 211 4518 4522 "kahn.ml" 212 4557 4573
+"kahn.ml" 210 4538 4542 "kahn.ml" 211 4577 4593
 type(
   unit
 )
-"kahn.ml" 210 4493 4496 "kahn.ml" 212 4557 4573
+"kahn.ml" 209 4513 4516 "kahn.ml" 211 4577 4593
 type(
   unit
 )
-"kahn.ml" 209 4473 4475 "kahn.ml" 212 4557 4573
+"kahn.ml" 208 4493 4495 "kahn.ml" 211 4577 4593
 type(
   unit
 )
-"kahn.ml" 214 4590 4595 "kahn.ml" 214 4590 4600
+"kahn.ml" 216 4623 4628 "kahn.ml" 216 4623 4633
 type(
   'f process -> unit -> unit
 )
 ident(
-  def unify "kahn.ml" 215 4631 4632 "kahn.ml" 225 4867 4870
+  def unify "kahn.ml" 217 4664 4665 "kahn.ml" 227 4900 4903
 )
-"kahn.ml" 214 4590 4601 "kahn.ml" 214 4590 4602
+"kahn.ml" 216 4623 4634 "kahn.ml" 216 4623 4635
 type(
   'f process
 )
 ident(
-  def p "kahn.ml" 214 4590 4605 "kahn.ml" 214 4590 4629
+  def p "kahn.ml" 216 4623 4638 "kahn.ml" 216 4623 4662
 )
-"kahn.ml" 214 4590 4609 "kahn.ml" 214 4590 4611
+"kahn.ml" 216 4623 4642 "kahn.ml" 216 4623 4644
 type(
   unit
 )
-"kahn.ml" 214 4590 4615 "kahn.ml" 214 4590 4621
+"kahn.ml" 216 4623 4648 "kahn.ml" 216 4623 4654
 type(
   'f -> unit
 )
 ident(
   ext_ref Pervasives.ignore
 )
-"kahn.ml" 214 4590 4623 "kahn.ml" 214 4590 4626
+"kahn.ml" 216 4623 4656 "kahn.ml" 216 4623 4659
 type(
   'f process -> 'f
 )
 ident(
   int_ref run "kahn.ml" 181 3837 3843 "kahn.ml" 181 3837 3846
 )
-"kahn.ml" 214 4590 4627 "kahn.ml" 214 4590 4628
+"kahn.ml" 216 4623 4660 "kahn.ml" 216 4623 4661
 type(
   'f process
 )
 ident(
-  int_ref p "kahn.ml" 214 4590 4601 "kahn.ml" 214 4590 4602
+  int_ref p "kahn.ml" 216 4623 4634 "kahn.ml" 216 4623 4635
 )
-"kahn.ml" 214 4590 4622 "kahn.ml" 214 4590 4629
+"kahn.ml" 216 4623 4655 "kahn.ml" 216 4623 4662
 call(
   stack
 )
 type(
   'f
 )
-"kahn.ml" 214 4590 4615 "kahn.ml" 214 4590 4629
+"kahn.ml" 216 4623 4648 "kahn.ml" 216 4623 4662
 type(
   unit
 )
-"kahn.ml" 214 4590 4605 "kahn.ml" 214 4590 4629
+"kahn.ml" 216 4623 4638 "kahn.ml" 216 4623 4662
 type(
   unit -> unit
 )
-"kahn.ml" 215 4631 4636 "kahn.ml" 215 4631 4640
+"kahn.ml" 217 4664 4669 "kahn.ml" 217 4664 4673
 type(
   'a5 process -> ('a5 -> 'b1 process) -> ('b1 -> unit) -> unit
 )
 ident(
-  def bind "kahn.ml" 221 4802 4861 "kahn.ml" 225 4867 4870
+  def bind "kahn.ml" 223 4835 4894 "kahn.ml" 227 4900 4903
 )
-"kahn.ml" 215 4631 4641 "kahn.ml" 215 4631 4642
+"kahn.ml" 217 4664 4674 "kahn.ml" 217 4664 4675
 type(
   'a5 process
 )
 ident(
-  def p "kahn.ml" 215 4631 4643 "kahn.ml" 221 4802 4861
+  def p "kahn.ml" 217 4664 4676 "kahn.ml" 223 4835 4894
 )
-"kahn.ml" 215 4631 4644 "kahn.ml" 215 4631 4645
+"kahn.ml" 217 4664 4677 "kahn.ml" 217 4664 4678
 type(
   'a5 -> 'b1 process
 )
 ident(
-  def q "kahn.ml" 215 4631 4667 "kahn.ml" 221 4802 4861
+  def q "kahn.ml" 217 4664 4700 "kahn.ml" 223 4835 4894
 )
-"kahn.ml" 215 4631 4670 "kahn.ml" 215 4631 4671
+"kahn.ml" 217 4664 4703 "kahn.ml" 217 4664 4704
 type(
   int ref -> int
 )
 ident(
   ext_ref Pervasives.( ! )
 )
-"kahn.ml" 215 4631 4671 "kahn.ml" 215 4631 4672
+"kahn.ml" 217 4664 4704 "kahn.ml" 217 4664 4705
 type(
   int ref
 )
 ident(
   int_ref k "kahn.ml" 149 2900 2905 "kahn.ml" 149 2900 2906
 )
-"kahn.ml" 215 4631 4670 "kahn.ml" 215 4631 4672
+"kahn.ml" 217 4664 4703 "kahn.ml" 217 4664 4705
 type(
   int
 )
-"kahn.ml" 215 4631 4673 "kahn.ml" 215 4631 4675
+"kahn.ml" 217 4664 4706 "kahn.ml" 217 4664 4708
 type(
   int -> int -> bool
 )
 ident(
   ext_ref Pervasives.( >= )
 )
-"kahn.ml" 215 4631 4676 "kahn.ml" 215 4631 4677
+"kahn.ml" 217 4664 4709 "kahn.ml" 217 4664 4710
 type(
   int
 )
-"kahn.ml" 215 4631 4670 "kahn.ml" 215 4631 4677
+"kahn.ml" 217 4664 4703 "kahn.ml" 217 4664 4710
 type(
   bool
 )
-"kahn.ml" 216 4684 4692 "kahn.ml" 216 4684 4693
+"kahn.ml" 218 4717 4725 "kahn.ml" 218 4717 4726
 type(
   int ref
 )
 ident(
   int_ref k "kahn.ml" 149 2900 2905 "kahn.ml" 149 2900 2906
 )
-"kahn.ml" 216 4684 4694 "kahn.ml" 216 4684 4696
+"kahn.ml" 218 4717 4727 "kahn.ml" 218 4717 4729
 type(
   int ref -> int -> unit
 )
 ident(
   ext_ref Pervasives.( := )
 )
-"kahn.ml" 216 4684 4697 "kahn.ml" 216 4684 4698
+"kahn.ml" 218 4717 4730 "kahn.ml" 218 4717 4731
 type(
   int
 )
-"kahn.ml" 216 4684 4692 "kahn.ml" 216 4684 4698
+"kahn.ml" 218 4717 4725 "kahn.ml" 218 4717 4731
 type(
   unit
 )
-"kahn.ml" 216 4684 4700 "kahn.ml" 216 4684 4705
+"kahn.ml" 218 4717 4733 "kahn.ml" 218 4717 4738
 type(
   exn -> ('b1 -> unit) -> unit
 )
 ident(
   ext_ref Pervasives.raise
 )
-"kahn.ml" 216 4684 4715 "kahn.ml" 216 4684 4720
+"kahn.ml" 218 4717 4748 "kahn.ml" 218 4717 4753
 type(
   'b1 process -> unit -> unit
 )
 ident(
-  int_ref unify "kahn.ml" 214 4590 4595 "kahn.ml" 214 4590 4600
+  int_ref unify "kahn.ml" 216 4623 4628 "kahn.ml" 216 4623 4633
 )
-"kahn.ml" 216 4684 4723 "kahn.ml" 216 4684 4731
+"kahn.ml" 218 4717 4756 "kahn.ml" 218 4717 4764
 type(
   'a5 process -> ('a5 -> 'b1 process) -> 'b1 process
 )
 ident(
-  int_ref bind_aux "kahn.ml" 208 4430 4435 "kahn.ml" 208 4430 4443
+  int_ref bind_aux "kahn.ml" 207 4449 4454 "kahn.ml" 207 4449 4462
 )
-"kahn.ml" 216 4684 4732 "kahn.ml" 216 4684 4733
+"kahn.ml" 218 4717 4765 "kahn.ml" 218 4717 4766
 type(
   'a5 process
 )
 ident(
-  int_ref p "kahn.ml" 215 4631 4641 "kahn.ml" 215 4631 4642
+  int_ref p "kahn.ml" 217 4664 4674 "kahn.ml" 217 4664 4675
 )
-"kahn.ml" 216 4684 4734 "kahn.ml" 216 4684 4735
+"kahn.ml" 218 4717 4767 "kahn.ml" 218 4717 4768
 type(
   'a5 -> 'b1 process
 )
 ident(
-  int_ref q "kahn.ml" 215 4631 4644 "kahn.ml" 215 4631 4645
+  int_ref q "kahn.ml" 217 4664 4677 "kahn.ml" 217 4664 4678
 )
-"kahn.ml" 216 4684 4721 "kahn.ml" 216 4684 4736
+"kahn.ml" 218 4717 4754 "kahn.ml" 218 4717 4769
 call(
   stack
 )
 type(
   'b1 process
 )
-"kahn.ml" 216 4684 4714 "kahn.ml" 216 4684 4737
+"kahn.ml" 218 4717 4747 "kahn.ml" 218 4717 4770
 call(
   stack
 )
 type(
   unit -> unit
 )
-"kahn.ml" 216 4684 4706 "kahn.ml" 216 4684 4739
+"kahn.ml" 218 4717 4739 "kahn.ml" 218 4717 4772
 type(
   exn
 )
-"kahn.ml" 216 4684 4700 "kahn.ml" 216 4684 4739
+"kahn.ml" 218 4717 4733 "kahn.ml" 218 4717 4772
 type(
   ('b1 -> unit) -> unit
 )
-"kahn.ml" 216 4684 4686 "kahn.ml" 216 4684 4743
+"kahn.ml" 218 4717 4719 "kahn.ml" 218 4717 4776
 type(
   ('b1 -> unit) -> unit
 )
-"kahn.ml" 219 4757 4760 "kahn.ml" 219 4757 4768
+"kahn.ml" 221 4790 4793 "kahn.ml" 221 4790 4801
 type(
   'a5 process -> ('a5 -> 'b1 process) -> ('b1 -> unit) -> unit
 )
 ident(
-  int_ref bind_aux "kahn.ml" 208 4430 4435 "kahn.ml" 208 4430 4443
+  int_ref bind_aux "kahn.ml" 207 4449 4454 "kahn.ml" 207 4449 4462
 )
-"kahn.ml" 219 4757 4769 "kahn.ml" 219 4757 4770
+"kahn.ml" 221 4790 4802 "kahn.ml" 221 4790 4803
 type(
   'a5 process
 )
 ident(
-  int_ref p "kahn.ml" 215 4631 4641 "kahn.ml" 215 4631 4642
+  int_ref p "kahn.ml" 217 4664 4674 "kahn.ml" 217 4664 4675
 )
-"kahn.ml" 219 4757 4772 "kahn.ml" 219 4757 4773
+"kahn.ml" 221 4790 4805 "kahn.ml" 221 4790 4806
 type(
   'a5 -> 'b1 process
 )
@@ -3540,81 +3576,81 @@ type(
   'a5 -> 'b1 process
 )
 ident(
-  int_ref q "kahn.ml" 215 4631 4644 "kahn.ml" 215 4631 4645
+  int_ref q "kahn.ml" 217 4664 4677 "kahn.ml" 217 4664 4678
 )
-"kahn.ml" 219 4757 4760 "kahn.ml" 219 4757 4792
+"kahn.ml" 221 4790 4793 "kahn.ml" 221 4790 4825
 call(
   stack
 )
 type(
   ('b1 -> unit) -> unit
 )
-"kahn.ml" 221 4802 4808 "kahn.ml" 221 4802 4819
+"kahn.ml" 223 4835 4841 "kahn.ml" 223 4835 4852
 type(
   exn
 )
-"kahn.ml" 221 4802 4823 "kahn.ml" 221 4802 4828
+"kahn.ml" 223 4835 4856 "kahn.ml" 223 4835 4861
 type(
   exn -> ('b1 -> unit) -> unit
 )
 ident(
   ext_ref Pervasives.raise
 )
-"kahn.ml" 221 4802 4838 "kahn.ml" 221 4802 4843
+"kahn.ml" 223 4835 4871 "kahn.ml" 223 4835 4876
 type(
   'b1 process -> unit -> unit
 )
 ident(
-  int_ref unify "kahn.ml" 214 4590 4595 "kahn.ml" 214 4590 4600
+  int_ref unify "kahn.ml" 216 4623 4628 "kahn.ml" 216 4623 4633
 )
-"kahn.ml" 221 4802 4846 "kahn.ml" 221 4802 4854
+"kahn.ml" 223 4835 4879 "kahn.ml" 223 4835 4887
 type(
   'a5 process -> ('a5 -> 'b1 process) -> 'b1 process
 )
 ident(
-  int_ref bind_aux "kahn.ml" 208 4430 4435 "kahn.ml" 208 4430 4443
+  int_ref bind_aux "kahn.ml" 207 4449 4454 "kahn.ml" 207 4449 4462
 )
-"kahn.ml" 221 4802 4855 "kahn.ml" 221 4802 4856
+"kahn.ml" 223 4835 4888 "kahn.ml" 223 4835 4889
 type(
   'a5 process
 )
 ident(
-  int_ref p "kahn.ml" 215 4631 4641 "kahn.ml" 215 4631 4642
+  int_ref p "kahn.ml" 217 4664 4674 "kahn.ml" 217 4664 4675
 )
-"kahn.ml" 221 4802 4857 "kahn.ml" 221 4802 4858
+"kahn.ml" 223 4835 4890 "kahn.ml" 223 4835 4891
 type(
   'a5 -> 'b1 process
 )
 ident(
-  int_ref q "kahn.ml" 215 4631 4644 "kahn.ml" 215 4631 4645
+  int_ref q "kahn.ml" 217 4664 4677 "kahn.ml" 217 4664 4678
 )
-"kahn.ml" 221 4802 4844 "kahn.ml" 221 4802 4859
+"kahn.ml" 223 4835 4877 "kahn.ml" 223 4835 4892
 call(
   stack
 )
 type(
   'b1 process
 )
-"kahn.ml" 221 4802 4837 "kahn.ml" 221 4802 4860
+"kahn.ml" 223 4835 4870 "kahn.ml" 223 4835 4893
 call(
   stack
 )
 type(
   unit -> unit
 )
-"kahn.ml" 221 4802 4829 "kahn.ml" 221 4802 4861
+"kahn.ml" 223 4835 4862 "kahn.ml" 223 4835 4894
 type(
   exn
 )
-"kahn.ml" 221 4802 4823 "kahn.ml" 221 4802 4861
+"kahn.ml" 223 4835 4856 "kahn.ml" 223 4835 4894
 type(
   ('b1 -> unit) -> unit
 )
-"kahn.ml" 218 4750 4752 "kahn.ml" 221 4802 4861
+"kahn.ml" 220 4783 4785 "kahn.ml" 223 4835 4894
 type(
   ('b1 -> unit) -> unit
 )
-"kahn.ml" 215 4631 4667 "kahn.ml" 221 4802 4861
+"kahn.ml" 217 4664 4700 "kahn.ml" 223 4835 4894
 type(
   ('b1 -> unit) -> unit
 )
