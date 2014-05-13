@@ -1,12 +1,18 @@
 ### Starting build.
-# Target: example.ml.depends, tags: { annot, debug, extension:ml, file:example.ml, ocaml, ocamldep, quiet, thread }
-/usr/local/bin/ocamldep.opt -modules example.ml > example.ml.depends # cached
-# Target: kahn.ml.depends, tags: { annot, debug, extension:ml, file:kahn.ml, ocaml, ocamldep, quiet, thread }
-/usr/local/bin/ocamldep.opt -modules kahn.ml > kahn.ml.depends
-# Target: kahn.cmo, tags: { annot, byte, compile, debug, extension:cmo, extension:ml, file:kahn.cmo, file:kahn.ml, implem, ocaml, quiet, thread }
-/usr/local/bin/ocamlc.opt -c -g -annot -thread -o kahn.cmo kahn.ml
-# Target: example.cmo, tags: { annot, byte, compile, debug, extension:cmo, extension:ml, file:example.cmo, file:example.ml, implem, ocaml, quiet, thread }
-/usr/local/bin/ocamlc.opt -c -g -annot -thread -o example.cmo example.ml # cached
-# Target: example.byte, tags: { annot, byte, debug, dont_link_with, extension:byte, file:example.byte, link, ocaml, program, quiet, thread }
-/usr/local/bin/ocamlc.opt unix.cma -g -thread threads.cma kahn.cmo example.cmo -o example.byte
-# Compilation successful.
+# Target: agent.ml.depends, tags: { annot, debug, extension:ml, file:agent.ml, graphics, ocaml, ocamldep, quiet, thread }
+/usr/local/bin/ocamldep.opt -modules agent.ml > agent.ml.depends
+# Target: kahn.ml.depends, tags: { annot, debug, extension:ml, file:kahn.ml, graphics, ocaml, ocamldep, quiet, thread }
+/usr/local/bin/ocamldep.opt -modules kahn.ml > kahn.ml.depends # cached
+# Target: kahn.cmo, tags: { annot, byte, compile, debug, extension:cmo, extension:ml, file:kahn.cmo, file:kahn.ml, graphics, implem, ocaml, quiet, thread }
+/usr/local/bin/ocamlc.opt -c -g -annot -thread -o kahn.cmo kahn.ml # cached
+# Target: agent.cmo, tags: { annot, byte, compile, debug, extension:cmo, extension:ml, file:agent.cmo, file:agent.ml, graphics, implem, ocaml, quiet, thread }
+/usr/local/bin/ocamlc.opt -c -g -annot -thread -o agent.cmo agent.ml
+# Target: agent.byte, tags: { annot, byte, debug, dont_link_with, extension:byte, file:agent.byte, graphics, link, ocaml, program, quiet, thread }
+/usr/local/bin/ocamlc.opt unix.cma graphics.cma -g -thread threads.cma kahn.cmo agent.cmo -o agent.byte
++ /usr/local/bin/ocamlc.opt unix.cma graphics.cma -g -thread threads.cma kahn.cmo agent.cmo -o agent.byte
+File "_none_", line 1:
+Error: Error on dynamically loaded library: /usr/local/lib/ocaml/dllgraphics.so: dlopen(/usr/local/lib/ocaml/dllgraphics.so, 138): Library not loaded: /opt/local/lib/libX11.6.dylib
+  Referenced from: /usr/local/lib/ocaml/dllgraphics.so
+  Reason: image not found
+Command exited with code 2.
+# Compilation unsuccessful.

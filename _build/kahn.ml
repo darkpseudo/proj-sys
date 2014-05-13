@@ -93,6 +93,8 @@ module Th: S = struct
   let run e = e ()
 end
 
+
+
 module Proc: S = struct 
 	type 'a process = (unit -> 'a)
 	type 'a in_port = in_channel
@@ -145,10 +147,10 @@ end
 
 
 module Contin: S = struct 
-	
+
 	let k = ref 0
-	(*Cette exception est levŽ par run  quand on run mais qu'il n'y a rien ˆ renvoyer, 
-	cei n'arrive jamais normalement*)
+	(*Cette exception est lev? par run  quand on run mais qu'il n'y a rien ö renvoyer, 
+	ce?i n'arrive jamais normalement*)
 	exception Ran
 	(* Cette exception est pour dire de changer*)
 	exception Switch of (unit -> unit) 
@@ -156,73 +158,71 @@ module Contin: S = struct
 	type 'a in_port = 'a Queue.t 
 	type 'a out_port = 'a Queue.t ;;
 
-	(*Switch sert ˆ changer de processus aprs un get o un put*)
+	(*Switch sert ö changer de processus apr?s un get o? un put*)
 
 	let new_channel () = let q = Queue.create () in (q,q) ;;
 
 		let put v (c : 'a out_port)  =  begin k := !k + 1;
 		let proc k  = k (Queue.push v c) in proc end
-		
+
 
 
 	let  get (c : 'a Queue.t) = 
    
       let  proc k  = k (Queue.pop  c) in (proc : 'a process)
-			
 
-	
-	
-	
-	
+
+
+
+
+
 	let return a = let p (k : 'a -> unit) = k a in (p : 'a process) 
-	
-	(* Le processus prend comme continuation Push, et ˆ la fin on Pop ce qui a ŽtŽ Push, 
-	ce qui me chagrine c'est qu'on est pas sžr d'avoir Push quoi que ce soit.*)			
-	let  run (p : 'a process) = 
+
+	(* Le processus prend comme continuation Push, et ö la fin on Pop ce qui a ?t? Push, 
+	ce qui me chagrine c'est qu'on est pas s?r d'avoir Push quoi que ce soit.*)			
+	let  rec run (p : 'a process) = 
 					let queue = Queue.create () in 
  	   				let push a = Queue.push a queue in 
-							p (push); 
-							(*try*) Queue.pop queue 
-	 						(*with Queue.Empty -> raise (Ran)*)
-  
-	
+							
+							 p (push); 
+						   Queue.pop queue 
+		   				
 
         	  
-	
+
 	let rec doco_aux (l : unit process list) k = 	match l with
 		 | []  -> k ()   
      | a::q -> try 
 			       run a; doco_aux q k
-			     			   
+
 		    	with
 			 	 | Switch(b) -> doco_aux (q@[(fun f -> b () )]) k			 		 
 			 	 | Queue.Empty -> doco_aux (q@[a]) k
 			 	 (*| Ran -> doco_aux q k*)
 			 	 | _ -> assert false
-		
+
   let doco (l : unit process list) = (doco_aux l : unit process)
 
-			 
-				
+
+
 	let bind_aux p (q :'a -> 'b process) f=   
 		let a = run p in 
 			let b = run (q a) in 
 				let proc (k : 'b -> unit)  =  k b 
 					in proc (f) 	
-			 
-						
-						 
-						
+
+
+
+
 	let unify p = fun () -> ignore (run p) 
-	let bind p (q :'a -> 'b process) = if !k >= 2 then 
+	let bind p (q :'a -> 'b process) = if !k >= 5700 then 
 		begin k := 0; raise (Switch (unify ( bind_aux p q)) ) end
 	else
-		try 
+	  
 			bind_aux p (q :'a -> 'b process)
-	  with 
-	 		| Queue.Empty -> raise (Switch (unify ( bind_aux p q)))
-	
-	
+	  
+
+
 
 end
     
