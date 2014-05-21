@@ -167,8 +167,7 @@ module Contin: S = struct
 
 
 
-	let  get (c : 'a Queue.t) = 
-   
+	let  get (c : 'a Queue.t) =    
       let  proc k  = k (Queue.pop  c) in (proc : 'a process)
 
 

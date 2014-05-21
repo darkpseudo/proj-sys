@@ -19,14 +19,14 @@ module Example (K : Kahn.S) = struct
     (delay K.new_channel ()) >>=
     (fun (q_in, q_out) -> K.doco [   integers q_out  ; output q_in ])
     
-  let rec test (a : int K.in_port) =  K.doco [((K.get a) >>=
-   (fun n -> Format.printf "%d@." n; K.return () ))]
+  let rec test (a : int K.in_port) =  K.doco[K.doco [((K.get a) >>=
+   (fun n -> Format.printf "%d@." n; K.return () ))]]
 
 end
 
 
 
 
-module E = Example(Kahn.Contin)
+module E = Example(Kahn.Proc)
 
-let () = E.K.run E.main
+let () = let (a,b) = E.K.new_channel () in E.K.run (E.test a)
